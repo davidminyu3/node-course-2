@@ -9,17 +9,17 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
 
   const db = client.db('TodoApp');
 
-  // findOneAndUpdate(filter, update, options, callback)
-  // db.collection('Todos').findOneAndUpdate(
-  //   { // filter
-  //     _id: new ObjectID("5c3fff8b37601155bd3fd5cb")
-  //   }, { // update
-  //     $set: {completed: false}
-  //   }, { // options
-  //     returnOriginal: false
-  //   }).then((res) => {
-  //     console.log(res);
-  //   });
+  findOneAndUpdate(filter, update, options, callback)
+  db.collection('Todos').findOneAndUpdate(
+    { // filter
+      _id: new ObjectID("5c3fff8b37601155bd3fd5cb")
+    }, { // update
+      $set: {completed: false}
+    }, { // options
+      returnOriginal: false
+    }).then((res) => {
+      console.log(res);
+    });
 
   db.collection('Users').findOneAndUpdate(
     {
