@@ -24,4 +24,6 @@ app.post('/todos', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`@@@ SERVER ON PORT ${PORT} @@@`);
-})
+});
+
+module.exports = {app};
